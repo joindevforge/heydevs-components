@@ -9,7 +9,7 @@ module.exports = {
     extend: {
      fontFamily:{
       "Inter":['Inter', 'sans-serif']
-     }
+     },
     },
   },
   plugins: [],
