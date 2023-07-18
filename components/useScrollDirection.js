@@ -12,7 +12,7 @@ const useScrollDirection = () => {
       const currentScrollY = window.scrollY;
       setScrollDirection(currentScrollY > lastScrollY ? 'down' : 'up');
       lastScrollY = currentScrollY;
-    }, 100); // Adjust the debounce delay as needed
+    }, 0); // Adjust the debounce delay as needed
 
     // Add scroll event listener
     document.addEventListener('scroll', handleScroll);

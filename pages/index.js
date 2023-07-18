@@ -48,7 +48,7 @@ export default function Home() {
                 Work With Top Companies
               </h2>
               <div className="mt-2 py-3 sm:mt-3">
-                <div className="flex flex-nowrap overflow-hidden whitespace-nowrap h-[100vh] bg-red-400">
+                <div className="flex flex-nowrap overflow-hidden whitespace-nowrap">
                   <Marquees/>
                 </div>
               </div>
