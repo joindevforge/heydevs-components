@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Marquee from 'react-fast-marquee';
-import useScrollDirection from './useScrollDirection';
+import useScrollDirection from '../customeHook/useScrollDirection';
 
 const data = [
     "/assets/home/svg/svgexport-6.svg",

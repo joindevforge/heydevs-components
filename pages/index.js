@@ -49,13 +49,44 @@ export default function Home() {
               </h2>
               <div className="mt-2 py-3 sm:mt-3">
                 <div className="flex flex-nowrap overflow-hidden whitespace-nowrap">
-                  <Marquees/>
+                  <Marquees />
                 </div>
               </div>
             </section>
           </div>
         </div>
       </section>
+      <div
+        data-orientation="horizontal"
+        role="separator"
+        className="bg-neutral-200 data-[orientation=horizontal]:h-[1px] data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-[1px] !m-0"
+      />
+      <div className="xs:px-5 container mx-auto px-4 sm:px-6 md:px-7 lg:px-8 sm:space-y-30 space-y-8 py-14 sm:py-16 md:py-20 lg:py-24 lg:!max-w-[1260px]">
+        <div>
+          <div
+            className="mb-7.5 xs:mb-8 sm:mb-12 md:mb-14 xl:mb-16"
+            style={{ opacity: 1, transform: "none" }}
+          >
+            <video
+              loop
+              playsInline
+              autoPlay
+              muted
+              src="/assets/home/videos/showoff-feature-a.mov"
+              className="w-full rounded-lg md:hidden"
+            />
+            <video
+              loop
+              playsInline
+              autoPlay
+              muted
+              src="/assets/home/videos/showoff-feature-a-long.mov"
+              className="hidden w-full rounded-lg md:block"
+            />
+          </div>
+          
+        </div>
+      </div>
     </>
   );
 }
