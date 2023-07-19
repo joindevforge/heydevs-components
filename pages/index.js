@@ -1,7 +1,22 @@
+import Acordian from "@/components/Acordian";
 import Marquees from "@/components/Marquees";
 import Link from "next/link";
-import { useState } from "react";
-import { Waypoint } from "react-waypoint";
+
+const data1 = [
+  "Never apply for a job again",
+  "One profile for you career",
+  "Swipe when you are okay with work",
+  "Personailized opportunity",
+  "Connect with empoloyers",
+];
+
+
+const data2 = [
+  "Experience matter",
+  "Anonymous profile",
+  "Atypical job aquistion",
+  "Secure personal information"
+]
 
 export default function Home() {
   return (
@@ -84,7 +99,89 @@ export default function Home() {
               className="hidden w-full rounded-lg md:block"
             />
           </div>
-          
+          <div className="gap-7.5 flex flex-col md:flex-row md:gap-8">
+            <div className="flex-1">
+              <div style={{ opacity: 1, transform: "none" }}>
+                <h2 className="w-full text-3xl font-bold text-neutral-800 md:text-4xl lg:text-5xl lg:leading-[60px]">
+                  An Innovative Way To Get A Job!
+                </h2>
+                <h3 className="mt-2 text-sm text-neutral-800 sm:text-base">
+                  Let companies apply directly to you with job opportunities!
+                </h3>
+                <Link
+                  className=" bg-[#7000FF]  text-white rounded-xl sm:rounded-2xl px-5 py-3 text-sm font-medium inline-flex justify-center mt-5 !py-3.5 px-4 !text-sm !font-bold transition-transform hover:scale-[102%] active:scale-[98%] sm:mt-6 lg:mt-7 xl:mt-8"
+                  target="_blank"
+                  href="https://app.heydevs.io/auth/candidate/register"
+                >
+                  Create Profile
+                </Link>
+              </div>
+            </div>
+            <div className="flex flex-1">
+              <div className="!m-0 flex-1" data-orientation="vertical">
+                <div style={{ opacity: "1", transform: "none" }}>
+                  {data1.map((item, index) => {
+                    return (
+                      <Acordian key={index} index={index} item={item}/>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-orientation="horizontal"
+        role="separator"
+        className="bg-neutral-200 data-[orientation=horizontal]:h-[1px] data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-[1px] !m-0"
+      />
+      <div className="xs:px-5 container space-y-8 px-4 sm:px-6 md:px-7 lg:px-8 sm:space-y-30  py-14 sm:py-16 md:py-20 lg:py-24 lg:!max-w-[1260px] mx-auto">
+        <div>
+          <div className="gap-7.5 flex flex-col md:flex-row md:gap-8">
+            {/* first start */}
+            <div className="flex-1">
+              <div style={{ opacity: 1, transform: "none" }}>
+                <h2 className="w-full text-3xl font-bold text-neutral-800 md:text-4xl lg:text-5xl lg:leading-[60px]">
+                  Unbiased Hiring Experience
+                </h2>
+                <h3 className="mt-2 text-sm text-neutral-800 sm:text-base">
+                  We actively hide any biased information - get opportunities
+                  based solely on your talents and abilities.
+                </h3>
+              </div>
+              <div style={{ opacity: 1, transform: "none" }}>
+                <video
+                  loop
+                  playsInline
+                  autoPlay
+                  muted
+                  src="/assets/home/videos/showoff-feature-b.mp4"
+                  className="mt-12 w-full rounded-lg sm:mt-16 md:mt-20 md:hidden lg:mt-24 lg:order-last"
+                />
+                <video
+                  loop
+                  playsInline
+                  autoPlay
+                  muted
+                  src="/assets/home/videos/showoff-feature-b-long.mov"
+                  className="mt-12 hidden w-full rounded-lg sm:mt-16 md:mt-20 md:block lg:mt-24 lg:order-last"
+                />
+              </div>
+            </div>
+            {/* first end  */}
+            <div className="flex flex-1 xl:pb-18 items-end md:pb-6 lg:pb-10">
+                    <div className="!m-0 flex-1">
+                    {
+                      data2.map((item,index)=>{
+                        return(
+                          <Acordian key={index} index={index} item={item}/>
+                        )
+                      })
+                    }
+                    </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

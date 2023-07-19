@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 
 function Header() {
     const [active,setActive] = useState('developer')
@@ -7,9 +7,25 @@ function Header() {
     setActive(button);
   };
 
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+
+  const handleScroll = () => {
+    const scrolled = window.scrollY;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const percentage = (scrolled / height) * 100;
+    setScrollPercentage(percentage);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const header = scrollPercentage > 10 ? 'white' : 'transparent';
+
   return (
    <>
-    <header className='fixed top-0 z-20 py-4 sm:py-6  w-full transition-colors group/header'>
+    <header className={`${header === "white" ?"bg-white fixed top-0 z-20 py-4 sm:py-6  w-full transition-colors group/header" :" bg-transparent fixed top-0 z-20 py-4 sm:py-6  w-full transition-colors group/header"}`}>
     <div className="xs:px-5 mx-auto container space-y-8 px-4 sm:px-6 lg:px-8 lg:!max-w-[1260px] relative flex items-center justify-between">
   <div className="flex items-center gap-2">
     <svg
@@ -18,7 +34,7 @@ function Header() {
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="z-50 !m-0 cursor-pointer group-[:not(.has-scroll-over)]/header:text-white lg:hidden"
+      className={`z-50 !m-0 cursor-pointer group-[:not(.has-scroll-over)] lg:hidden ${header === "white"?" text-black":" text-white"}`}
     >
       <path
         d="M11 20H29M11 14H29M11 26H29"
@@ -35,7 +51,7 @@ function Header() {
         viewBox="0 0 152 34"
         fill="white"
         xmlns="http://www.w3.org/2000/svg"
-        className="aspect-[152/33] w-[93px] group-[:not(.has-scroll-over)]/header:text-white sm:w-[152px]"
+        className={`aspect-[152/33] w-[93px] group-[:not(.has-scroll-over)]/header:text-white sm:w-[152px] ${header === "white"?" text-black":" text-white"}`}
       >
         <path
           d="M56.5249 17.1715C56.5249 14.6079 55.4235 13.3261 53.2208 13.3261C52.107 13.3247 51.029 13.7181 50.1785 14.4361C49.7555 14.7584 49.4005 15.161 49.134 15.6208C48.8674 16.0805 48.6945 16.5884 48.6252 17.1151V26.4082H45.4777V3.77661H48.6252L48.6047 11.9545L48.2838 14.0875L48.6355 14.2105L49.6958 12.3211C50.2122 11.7404 50.8399 11.2688 51.5417 10.9342C52.2411 10.5792 53.0139 10.3922 53.7984 10.3882C55.6127 10.3882 57.0469 10.9975 58.1013 12.216C59.1556 13.4346 59.6836 15.0864 59.6853 17.1715V26.4005H56.5249V17.1715Z"
