@@ -14,6 +14,7 @@ module.exports =  {
      backgroundImage:{
       "gradient-2":"linear-gradient(313deg,#4a158a,#844cfd)",
       "gradient-3":"linear-gradient(143deg,hsla(0,0%,100%,0),rgba(133,77,254,.11))",
+      "gradient-5":"linear-gradient(180deg,#6326fe,#6326fe);",
       "gradient-6":"linear-gradient(313deg,#4a158a,#844cfd)",
       "gradient-7":"radial-gradient(116.43% 131.69% at -15.97% -17.2%,hsla(0,0%,100%,.6) 0,hsla(0,0%,100%,.2) 100%)"
      },

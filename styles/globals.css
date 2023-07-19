@@ -16,7 +16,30 @@
     transition-duration: .15s;
 }
 
+
 .active{
+    background-color: #7000FF;
+    color: white;
+}
+
+
+.animate-image-open{
+    animation: image-open .8s cubic-bezier(.22,1,.36,1) both;
+    -webkit-animation: image-open .8s cubic-bezier(.22,1,.36,1) both;
+}
+
+@keyframes image-open {
+    0% {
+        opacity: .8;
+        transform: scale(1.04);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.activee{
     background-color: #7000FF;
     color: white;
 }

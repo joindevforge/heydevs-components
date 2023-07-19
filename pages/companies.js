@@ -1,3 +1,5 @@
+import CompetitiveEge from '@/components/CompetitiveEge'
+import ImageGallery from '@/components/ImageGallery'
 import Marquees from '@/components/Marquees'
 import Link from 'next/link'
 import React from 'react'
@@ -79,111 +81,8 @@ function company() {
         </div>
       </section>
       {/* new section start */}
-      <div className='xs:px-5 container space-y-8 px-4 sm:px-6 mx-auto md:px-7 lg:px-8 py-14 sm:py-16 md:py-20 lg:py-24 lg:!max-w-[1260px]'>
-      <section className="">
-  <div style={{ opacity: 1, transform: "none" }}>
-    <h2 className="text-center text-3xl font-bold !leading-normal text-neutral-800 sm:hidden sm:text-4xl lg:text-5xl">
-      Get A <br />
-      Competitive Edge
-    </h2>
-    <h2 className="hidden text-center text-3xl font-bold !leading-normal text-neutral-800 sm:block sm:text-4xl lg:text-5xl">
-      Get A Competitive Edge
-    </h2>
-  </div>
-  <div className="mt-5 grid grid-cols-1 gap-5 sm:mt-8 md:mt-12 lg:mt-16 lg:grid-cols-[380px_1fr] lg:gap-6 xl:mt-20 xl:grid-cols-[484px_1fr]">
-    <div style={{ opacity: 1, transform: "none" }}>
-      <div className="h-full overflow-hidden rounded-[10px]">
-        <img
-          alt="Weekly new “open to work” talents"
-          loading="lazy"
-          width={1292}
-          height={1328}
-          decoding="async"
-          data-nimg={1}
-          className="animate-image-open h-full rounded-[10px] bg-neutral-200 object-cover object-center max-lg:aspect-square max-sm:w-full"
-          src="/img/open-to-work.webp"
-          style={{ color: "transparent" }}
-        />
-      </div>
-    </div>
-    <div className="grid grid-cols-2 gap-4">
-      <div style={{ opacity: 1, transform: "none" }}>
-        <div className="relative h-full py-4 sm:aspect-square hover:bg-primary-7000 sm:py-6 cursor-pointer">
-          <div className="absolute inset-x-0 top-0 -z-10 h-full max-h-[4px] w-full bg-neutral-400  transition-all duration-500" />
-          <div className="text-black flex h-full flex-col justify-between gap-3 transition-all duration-500">
-            <div className="space-y-1">
-              <h4 className="text-3xl font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl">
-                &lt;80%
-              </h4>
-              <p className="3xl:text-3xl mt-1 w-[80%] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-                Reduction in hiring costs
-              </p>
-            </div>
-            <div className="text-sm font-semibold sm:text-base md:text-lg lg:text-xl">
-              [1]
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style={{ opacity: 1, transform: "none" }}>
-        <div className="relative h-full py-4 sm:aspect-square sm:py-6">
-          <div className="bg-gradient-5 max-h-full rounded-[10px] absolute inset-x-0 top-0 -z-10 h-full max-h-[4px] w-full bg-neutral-400 transition-all duration-500" />
-          <div className="translate-x-4 text-white sm:translate-x-5 flex h-full flex-col justify-between gap-3 transition-all duration-500">
-            <div className="space-y-1">
-              <h4 className="text-3xl font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl">
-                500+
-              </h4>
-              <p className="3xl:text-3xl mt-1 w-[80%] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-                Weekly new “open to work” talents
-              </p>
-            </div>
-            <div className="text-sm font-semibold sm:text-base md:text-lg lg:text-xl">
-              [2]
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style={{ opacity: 1, transform: "none" }}>
-        <div className="relative h-full py-4 sm:aspect-square sm:py-6 cursor-pointer">
-          <div className="absolute inset-x-0 top-0 -z-10 h-full max-h-[4px] w-full bg-neutral-400 transition-all duration-500" />
-          <div className="text-black flex h-full flex-col justify-between gap-3 transition-all duration-500">
-            <div className="space-y-1">
-              <h4 className="text-3xl font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl">
-                10x
-              </h4>
-              <p className="3xl:text-3xl mt-1 w-[80%] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-                More efficient hiring
-              </p>
-            </div>
-            <div className="text-sm font-semibold sm:text-base md:text-lg lg:text-xl">
-              [3]
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style={{ opacity: 1, transform: "none" }}>
-        <div className="relative h-full py-4 sm:aspect-square sm:py-6 cursor-pointer">
-          <div className="absolute inset-x-0 top-0 -z-10 h-full max-h-[4px] w-full bg-neutral-400 transition-all duration-500" />
-          <div className="text-black flex h-full flex-col justify-between gap-3 transition-all duration-500">
-            <div className="space-y-1">
-              <h4 className="text-3xl font-semibold md:text-4xl lg:text-5xl 2xl:text-6xl">
-                200+
-              </h4>
-              <p className="3xl:text-3xl mt-1 w-[80%] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-                Clients
-              </p>
-            </div>
-            <div className="text-sm font-semibold sm:text-base md:text-lg lg:text-xl">
-              [4]
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-      </div>
+      <CompetitiveEge/>
+      {/* <ImageGallery/> */}
       {/* section end */}
       <div className="pb-18 bg-gradient-6 pt-10 sm:pb-20 sm:pt-12 md:pb-24 md:pt-16 lg:pb-28 lg:pt-20 xl:pb-32 xl:pt-24">
   <div className="xs:px-5 container mx-auto space-y-8 px-4 sm:px-6 md:px-7 lg:px-8 lg:!max-w-[1260px]">
