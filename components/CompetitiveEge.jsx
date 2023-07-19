@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const data1 = [
   {
@@ -36,6 +36,20 @@ function CompetitiveEge() {
     setIsActive(false)
   };
 
+  const [isImageChanging, setIsImageChanging] = useState(false);
+
+useEffect(() => {
+  // When activeImage changes, set isImageChanging to true for a short time (e.g., 300ms)
+  setIsImageChanging(true);
+  const timer = setTimeout(() => {
+    setIsImageChanging(false);
+  }, 300); // Adjust the duration as needed
+
+  // Clear the timer on component unmount
+  return () => clearTimeout(timer);
+}, [activeImage]);
+
+
   return (
     <div className="xs:px-5 container space-y-8 px-4 sm:px-6 mx-auto md:px-7 lg:px-8 py-14 sm:py-16 md:py-20 lg:py-24 lg:!max-w-[1260px]">
       <section className="">
@@ -58,9 +72,12 @@ function CompetitiveEge() {
                 height={1328}
                 decoding="async"
                 data-nimg={1}
-                className="animate-image-open h-full rounded-[10px] bg-neutral-200 object-cover object-center max-lg:aspect-square max-sm:w-full"
                 src={`/assets/companies/${activeImage}.webp`}
                 style={{ color: "transparent" }}
+                className={`animate-image-open h-full rounded-[10px] bg-neutral-200 object-cover object-center max-lg:aspect-square max-sm:w-full ${
+          isImageChanging ? "animate" : ""
+        }`}
+        key={activeImage}
               />
             </div>
           </div>

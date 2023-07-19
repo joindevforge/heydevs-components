@@ -20,6 +20,12 @@ module.exports =  {
      },
       colors:{
         "primary-7000":"#7000ff"
+      },
+      screens:{
+        lg:"1024px",
+        "md":"768px",
+        "sm":""
+
       }
     },
   },
