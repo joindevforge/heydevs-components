@@ -101,14 +101,14 @@ export default function Home() {
           <div className="gap-7.5 flex flex-col md:flex-row md:gap-8">
             <div className="flex-1">
               <div style={{ opacity: 1, transform: "none" }}>
-                <h2 className="w-full text-3xl font-bold text-neutral-800 md:text-4xl lg:text-5xl lg:leading-[60px]">
+                <h2 className="w-full text-3xl font-bold text-neutral-800 mt-8 md:mt-0 md:text-4xl lg:text-5xl lg:leading-[60px]">
                   An Innovative Way To Get A Job!
                 </h2>
                 <h3 className="mt-2 text-sm text-neutral-800 sm:text-base">
                   Let companies apply directly to you with job opportunities!
                 </h3>
                 <Link
-                  className=" bg-[#7000FF]  text-white rounded-xl sm:rounded-2xl px-5 py-3 text-sm font-medium inline-flex justify-center mt-5 !py-3.5 px-4 !text-sm !font-bold transition-transform hover:scale-[102%] active:scale-[98%] sm:mt-6 lg:mt-7 xl:mt-8"
+                  className=" bg-[#7000FF]  text-white rounded-xl sm:rounded-2xl  inline-flex justify-center mt-5 !py-3.5 px-4 !text-sm !font-bold transition-transform hover:scale-[102%] active:scale-[98%] sm:mt-6 lg:mt-7 xl:mt-8"
                   target="_blank"
                   href="https://app.heydevs.io/auth/candidate/register"
                 >
@@ -116,7 +116,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-1">
+            <div className="flex flex-1 mt-8 md:mt-0">
               <div className="!m-0 flex-1" data-orientation="vertical">
                 <div style={{ opacity: "1", transform: "none" }}>
                   {data1.map((item, index) => {
@@ -133,7 +133,7 @@ export default function Home() {
         role="separator"
         className="bg-neutral-200 data-[orientation=horizontal]:h-[1px] data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-[1px] !m-0"
       />
-      <div className="xs:px-5 container space-y-8 px-4 sm:px-6 md:px-7 lg:px-8 sm:space-y-30  py-14 sm:py-16 md:py-20 lg:py-24 lg:!max-w-[1260px] mx-auto">
+      <div className="xs:px-5 mx-auto container space-y-8 px-4 sm:px-6 md:px-7 lg:px-8 sm:space-y-30  py-14 sm:py-16 md:py-20 lg:py-24 lg:!max-w-[1260px] ">
         <div>
           <div className="gap-7.5 flex flex-col md:flex-row md:gap-8">
             {/* first start */}
@@ -380,7 +380,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="xs:px-5 container space-y-8 px-4 sm:px-6 md:px-7 lg:px-8 lg:!max-w-[1260px]">
+      <div className="xs:px-5 mx-auto container space-y-8 px-4 sm:px-6 md:px-7 lg:px-8 lg:!max-w-[1260px]">
   <div className="grid grid-cols-2 gap-8 py-24 sm:py-28">
     <div style={{ opacity: 1, transform: "none" }}>
       <img
