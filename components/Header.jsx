@@ -21,7 +21,7 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const header = scrollPercentage > 10 ? 'white' : 'transparent';
+  const header = scrollPercentage > 8 ? 'white' : 'transparent';
 
   return (
    <>
@@ -51,7 +51,7 @@ function Header() {
         viewBox="0 0 152 34"
         fill="white"
         xmlns="http://www.w3.org/2000/svg"
-        className={`aspect-[152/33] w-[93px] group-[:not(.has-scroll-over)]/header:text-white sm:w-[152px] ${header === "white"?" text-black":" text-white"}`}
+        className={`aspect-[152/33] w-[93px] group-[:not(.has-scroll-over)] sm:w-[152px] ${header === "white"?" text-black":" text-white"}`}
       >
         <path
           d="M56.5249 17.1715C56.5249 14.6079 55.4235 13.3261 53.2208 13.3261C52.107 13.3247 51.029 13.7181 50.1785 14.4361C49.7555 14.7584 49.4005 15.161 49.134 15.6208C48.8674 16.0805 48.6945 16.5884 48.6252 17.1151V26.4082H45.4777V3.77661H48.6252L48.6047 11.9545L48.2838 14.0875L48.6355 14.2105L49.6958 12.3211C50.2122 11.7404 50.8399 11.2688 51.5417 10.9342C52.2411 10.5792 53.0139 10.3922 53.7984 10.3882C55.6127 10.3882 57.0469 10.9975 58.1013 12.216C59.1556 13.4346 59.6836 15.0864 59.6853 17.1715V26.4005H56.5249V17.1715Z"
@@ -106,14 +106,14 @@ function Header() {
   </div>
   <div className="absolute left-1/2 top-1/2 !m-0 hidden -translate-x-1/2 -translate-y-1/2 items-center rounded-full border border-neutral-500 p-1 lg:flex">
     <Link
-      className={` ${active ==='developer' ? 'active':""}   text-white rounded-full px-5 py-3 text-sm font-medium inline-flex justify-center duration-400 transition-colors group-[.has-scroll-over]/header:text-black`}
+      className={` ${active ==='developer' ? 'active':""}   ${header === "white"?" text-black":" text-white"} rounded-full px-5 py-3 text-sm font-medium inline-flex justify-center duration-400 transition-colors group-[.has-scroll-over]/header:text-black`}
       href="/"
       onClick={() => handleButtonClick('developer')}
     >
       For Developers
     </Link>
     <Link
-      className={`  ${active ==='companies' ? 'active':""} bg-primary-700 text-white rounded-full px-5 py-3 text-sm font-medium inline-flex justify-center duration-400 transition-colors`}
+      className={`  ${active ==='companies' ? 'active':""} bg-primary-700 ${header === "white"?" text-black":" text-white"} rounded-full px-5 py-3 text-sm font-medium inline-flex justify-center duration-400 transition-colors`}
       href="/companies"
       onClick={() => handleButtonClick('companies')}
     >
@@ -121,8 +121,8 @@ function Header() {
     </Link>
   </div>
   <div className="!m-0 flex items-center gap-4">
-    <a
-      className="text-white rounded-full px-5 py-3 text-sm font-medium inline-flex justify-center group-[.has-scroll-over]/header:border-primary-700 group-[.has-scroll-over]/header:active:bg-primary-800 group-[.has-scroll-over]/header:bg-primary-700 !m-0 hidden gap-1 rounded-xl border !pb-1 !pl-2 !pr-3 !pt-2.5 transition-colors lg:flex"
+    <Link
+      className={` ${header === "white"?" bg-primary-7000":" bg-transparent"} text-white  px-5 py-3 text-sm font-medium inline-flex justify-center group-[.has-scroll-over]/header:border-primary-700 group-[.has-scroll-over]/header:active:bg-primary-800 group-[.has-scroll-over]/header:bg-primary-700 !m-0 hidden gap-1 rounded-xl border !pb-1 !pl-2 !pr-3 !pt-2.5 transition-colors lg:flex`}
       target="_blank"
       href="https://heydevs.page.link/download"
     >
@@ -159,20 +159,20 @@ function Header() {
         </g>
       </svg>{" "}
       Install
-    </a>
-    <div className="!m-0 flex h-fit items-center gap-2 divide-x divide-white group-[.has-scroll-over]/header:divide-neutral-800">
-      <a
-        className="text-white rounded-full px-5 py-3 text-sm font-medium inline-flex justify-center !m-0 h-fit rounded-none !px-3 !py-0 uppercase transition-colors group-[.has-scroll-over]/header:text-neutral-800 !text-white group-[.has-scroll-over]/header:!text-neutral-800"
+    </Link>
+    <div className={`!m-0 flex h-fit items-center gap-2 divide-x  ${header === "white"?" divide-black":" divide-white"} `}>
+      <Link
+        className={`text-sm ${header === "white"?" text-black":" text-white"} font-medium inline-flex justify-center !m-0 h-fit rounded-none !px-3 !py-0 uppercase transition-colors   group-[.has-scroll-over]/header:!text-neutral-800`}
         href="/en/companies"
       >
         en
-      </a>
-      <a
-        className="text-white rounded-full px-5 py-3 text-sm font-medium inline-flex justify-center !m-0 h-fit rounded-none !px-3 !py-0 uppercase transition-colors group-[.has-scroll-over]/header:text-neutral-800 !text-neutral-400 hover:!text-neutral-200 group-[.has-scroll-over]/header:!text-neutral-600 group-[.has-scroll-over]/header:hover:!text-neutral-800"
+      </Link>
+      <Link
+        className=" text-sm font-medium inline-flex justify-center !m-0 h-fit rounded-none !px-3 !py-0 uppercase transition-colors group-[.has-scroll-over]/header:text-neutral-800 !text-neutral-400 hover:!text-neutral-200 group-[.has-scroll-over]/header:!text-neutral-600 group-[.has-scroll-over]/header:hover:!text-neutral-800"
         href="/vi/companies"
       >
         vi
-      </a>
+      </Link>
     </div>
   </div>
 </div>
